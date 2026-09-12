@@ -39,6 +39,16 @@ Or just open `index.html` directly in a browser.
 3. Under "Build and deployment," set **Source** to "Deploy from a branch," branch `main`, folder `/ (root)`.
 4. Save — GitHub gives you a live URL at `https://<your-username>.github.io/spendly/` within a minute or two.
 
+## Installing it as an app
+
+Spendly is a Progressive Web App (PWA) — once it's deployed (e.g. on GitHub Pages, which serves it over HTTPS), visitors can install it to their home screen or desktop like a real app, with its own icon and no browser address bar:
+
+- **Android (Chrome):** open the live link, tap the **⋮** menu, then **Add to Home screen** / **Install app**.
+- **iPhone/iPad (Safari):** open the live link, tap the **Share** button, then **Add to Home Screen**.
+- **Desktop (Chrome/Edge):** open the live link, click the **install** icon (⊕ or a small monitor icon) at the right side of the address bar.
+
+It also works offline after the first visit, since a service worker caches the app shell.
+
 ## Design process
 
 Rather than starting from a blank feature list, this project began by reading real user reviews of established expense trackers to find specific, recurring complaints and feature requests — things like hidden date filters, SMS-parsing bugs causing duplicate transactions, aggressive free-tier paywalls, and the lack of tag-scoped spending reports. Those findings shaped which features made it into v1 and which engineering pitfalls (single source of truth for all totals, reliable manual fallback, no artificial usage caps) were treated as non-negotiable from the start.
